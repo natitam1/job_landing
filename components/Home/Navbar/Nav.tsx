@@ -5,7 +5,11 @@ import React, { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { LuNetwork } from "react-icons/lu";
 
-const Nav = () => {
+type Props = {
+  openNav: () => void;
+};
+
+const Nav = ({ openNav }: Props) => {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -61,7 +65,10 @@ const Nav = () => {
           </button>
           {/* Theme Toggler */}
           {/* Burger menu */}
-          <HiBars3BottomRight className="h-8 w-8 cursor-pointer text-black lg:hidden" />
+          <HiBars3BottomRight
+            className="h-8 w-8 cursor-pointer text-black lg:hidden"
+            onClick={openNav}
+          />
         </div>
       </div>
     </div>
