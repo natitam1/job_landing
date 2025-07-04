@@ -68,7 +68,7 @@ const Nav = ({ openNav }: Props) => {
           <ThemeToggler />
           {/* Burger menu */}
           <HiBars3BottomRight
-            className="h-8 w-8 cursor-pointer text-black lg:hidden"
+            className="h-8 w-8 cursor-pointer dark:text-white text-black lg:hidden"
             onClick={openNav}
           />
         </div>
